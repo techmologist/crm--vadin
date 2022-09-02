@@ -22,6 +22,14 @@ public class CrmService {
         this.statusRepository = statusRepository;
     }
 
+    public void saveContact(Contact contact) {
+        if (contact == null) {
+            System.err.println("Contact is null. Are you sure you have connected your form to the application?");
+            return;
+        }
+        contactRepository.save(contact);
+    }
+
     public List<Contact> findAllContacts(String filterText){
         if(filterText == null || filterText.isEmpty()){
             return contactRepository.findAll();
@@ -34,7 +42,7 @@ public class CrmService {
         return contactRepository.count();
     }
 
-    public void deleteCount(Contact contact){
+    public void deleteContact(Contact contact){
         if(contact == null){
             System.err.println("Contact is null");
             return;
