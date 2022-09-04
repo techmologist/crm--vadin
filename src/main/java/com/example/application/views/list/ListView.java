@@ -2,6 +2,7 @@ package com.example.application.views.list;
 
 import com.example.application.data.entity.Contact;
 import com.example.application.data.service.CrmService;
+import com.example.application.views.MainLayout;
 import com.example.application.views.list.ContactForm;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
@@ -15,8 +16,8 @@ import com.vaadin.flow.router.Route;
 
 
 
-@PageTitle("list")
-@Route(value = "")
+@PageTitle("Contacts | My CRM")
+@Route(value = "",layout = MainLayout.class)
 public class ListView extends VerticalLayout {
 
     Grid<Contact> grid =new Grid<>(Contact.class);
