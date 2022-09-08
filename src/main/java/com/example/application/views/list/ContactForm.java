@@ -24,13 +24,13 @@ import java.util.List;
 public class ContactForm extends FormLayout {
 
     Binder<Contact> binder= new BeanValidationBinder<>(Contact.class);
-    TextField firstName= new TextField("First Name");
-    TextField lastName= new TextField("Last Name");
-    EmailField email= new EmailField("Email");
-    ComboBox<Status> status = new ComboBox<>("Status");
-    ComboBox<Company> company = new ComboBox<>("Company");
+    public TextField firstName= new TextField("First Name");
+    public TextField lastName= new TextField("Last Name");
+    public EmailField email= new EmailField("Email");
+    public ComboBox<Status> status = new ComboBox<>("Status");
+    public ComboBox<Company> company = new ComboBox<>("Company");
 
-    Button save= new Button("Save");
+    public Button save= new Button("Save");
     Button delete= new Button("Delete");
     Button cancel= new Button("Cancel");
     private Contact contact;
